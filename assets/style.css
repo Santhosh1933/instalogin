@@ -69,6 +69,7 @@ a
     border-radius: 5px;
     background-color: #3897f0;
     color: #fff;
+    pointer:cursor;
 }
 .insta-box__or{
     display: flex;
